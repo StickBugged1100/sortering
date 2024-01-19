@@ -13,8 +13,26 @@ public class App {
             a[i] = random;
         }
 
+        int[] b = selection(a);
+
         for (i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
+            //System.out.println(a[i]);
         }
+        for (i = 0; i < b.length; i++) {
+            //System.out.println(b[i]);
+        }
+    }
+
+    public static int[] selection(int[] arr) {
+        int i, f, index;
+        for (i = 0; i < arr.length; i++) {
+            for (f = i; f < arr.length + 1; f++) {
+                index = i;
+                if (arr[f] < arr[index]) {
+                    index = f;
+                }
+            }
+        }
+        return arr;
     }
 }
